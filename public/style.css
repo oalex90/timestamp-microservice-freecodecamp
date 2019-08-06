@@ -1,0 +1,15 @@
+/****** Main Styling ******/
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #222;
+	background-color: #ECF0F1;
+	text-align: center;
+}
+
+ol {
+	list-style-position: inside;
+  text-align: left;
+  margin: 0 10vw;
+}
