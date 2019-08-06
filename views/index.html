@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+     <title>Timestamp Microservice | Free Code Camp</title>
+     <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+     <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+     <div class="container">
+       <h1>Timestamp Microservice | Free Code Camp</h1>
+       <h2>User Stories</h2>
+       <ol>
+         <li>The API endpoint is <code>GET [project_url]/api/timestamp/:date_string?</code></li>
+         <br>
+         <li>A date string is valid if can be successfully parsed by <code>new Date(date_string)</code>.
+             Note that the unix timestamp needs to be an <b>integer</b> (not a string) specifying <b>milliseconds</b>.
+           In our test we will use date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.</li>
+         <br>
+         <li>If the date string is <b>empty</b> it should be equivalent to trigger <code>new Date()</code>, i.e. the service uses the current timestamp.</li>
+         <br>
+         <li>If the date string is <b>valid</b> the api returns a JSON having the structure <br>
+       <code>{"unix": [date.getTime()], "utc" : [date.toUTCString()] }</code> <br>
+       e.g. <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
+         <br>
+        <li>If the date string is invalid the api returns a JSON having the structure
+{"error" : "Invalid Date" }.</li>
+         <br>
+       </ol>
+       <br>
+       <h2>Example Usage:</h2>
+       <a href="https://timestamp-microservice-ajo.glitch.me/api/timestamp/2015-12-25" target="_blank">[project url]/api/timestamp/2015-12-25</a> <br> <br>
+       <a href="https://timestamp-microservice-ajo.glitch.me/api/timestamp/1450137600" target="_blank">[project url]/api/timestamp/1450137600</a>
+       <br>
+       <br>
+       <h2>Example Output:</h2>
+       <p><code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code></p>     
+     </div>
+   </body>
+
+</html>
